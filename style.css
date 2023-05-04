@@ -1,0 +1,28 @@
+body {
+  font-size: 80%;
+  position: relative;
+}
+
+#shop-data tr {
+  vertical-align: middle;
+}
+
+#preview-table .product-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#preview-table .style {
+  color: red;
+  font-weight: bold;
+}
+
+
+.edit-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin: auto;
+}
