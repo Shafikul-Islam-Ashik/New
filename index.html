@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="res/bootstrap@5.0.0-alpha2.min.css">
+  <link rel="stylesheet" href="res/chartist.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     -->
+</head>
+
+<body>
+
+  <!-- header section -->
+  <header>
+    <div class="container-fluid py-3 bg-dark">
+      <div class="row">
+        <div class="col-sm-12">
+          <nav class="navbar justify-content-between">
+            <a class="navbar-brand">
+              Shop App
+            </a>
+
+            <div class="d-flex">
+              <a href="#shop-modal" data-toggle="modal" class="btn btn-sm btn-primary mr-3">Add product</a>
+
+              <form class="form-inline">
+                <input class="form-control" placeholder="Search" type="search" aria-label="Search" id="searchtextbox">
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--data table-->
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <div class="card shadow" id="table">
+
+          <table class="table table-striped " id="shop-data">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Prduct Photo</th>
+                <th>Prduct Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- add product form -->
+
+  <div class="modal fade " id="shop-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="form-header">Add New Product</h3>
+          <button class="btn-close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="msg"></div>
+
+          <form id="add-product-form">
+
+            <div class="py-2">
+              <label for="">Name</label>
+              <input class="form-control" type="text" name="name" id="">
+            </div>
+
+            <div class="py-2">
+              <label for="">Price</label>
+              <input class="form-control" type="text" name="price" id="">
+            </div>
+            <div class="py-2">
+              <label for="">Quantity</label>
+              <input class="form-control" type="text" name="quantity" id="">
+            </div>
+
+            <div class="py-2">
+              <label for="">Photo</label>
+              <input class="form-control" type="file" accept="image/jpg" name="photo" id="photo">
+            </div>
+
+            <div class="py-2">
+              <img class="edit-img" src="">
+            </div>
+
+            <div class="py-2">
+              <input type="submit" name="add-btn" value="Add Product" class="btn btn-primary w-100">
+              <input type="submit" name="save-btn" value="Save Product" class="btn btn-primary w-100" style="display: none;">
+            </div>
+          </div>
+
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- preview product -->
+
+  <div class="modal fade " id="preview-single-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="form-header">Product Details</h3>
+          <button class="btn-close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card" id="single-product">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- edit product -->
+
+  <div class="modal fade " id="edit-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="form-header">Edit Product</h3>
+          <button class="btn-close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="edit-msg"></div>
+          <form id="product-update-form"></form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+     -->
+  <script src="app/function.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
