@@ -2,6 +2,8 @@
 https://shafikul-islam-ashik.github.io/shopapp_raw_js/
 ___________
 
+over mobile
+
 
 How the "crud" functionality are created
 __________________________________________
