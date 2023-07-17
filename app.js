@@ -404,9 +404,9 @@ productUpdateForm.onsubmit = (e) => {
 
 
   //get img input file and updated img src from update form
-  let u_imgTag = e.target.querySelector('#photo');
+  /*let u_imgTag = e.target.querySelector('#photo');
   let u_imgSrc = e.target.querySelector('#photo').getAttribute('img_src');
-
+*/
 
 
 
