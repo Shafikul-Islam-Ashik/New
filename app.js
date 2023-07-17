@@ -421,7 +421,7 @@ productUpdateForm.onsubmit = (e) => {
 
   //form validation
 
-  if (!name.trim() || !u_imgSrc || !price || !quantity) {
+  if (!name.trim() || !price || !quantity) {
 
     //set alert massage
     editMsg.innerHTML = setAlert('All fields are required');
@@ -433,11 +433,12 @@ productUpdateForm.onsubmit = (e) => {
 
   }
   //check img size (1mb max)
-  else if (u_imgTag.files[0].size > 1000000) {
+ /* else if (u_imgTag.files[0].size > 1000000) {
 
     editMsg.innerHTML = setAlert('Image should be within 1mb', 'warning');
 
-  } else {
+  }*/
+  else {
 
     //get ls data
     let data = readLsData('product');
