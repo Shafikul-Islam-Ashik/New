@@ -1,5 +1,6 @@
 //get elements
 
+
 const productForm = document.getElementById('add-product-form');
 const msg = document.querySelector('#msg');
 const editMsg = document.getElementById('edit-msg');
@@ -77,9 +78,7 @@ const getAllProducts = () => {
 
 
     tableBody.innerHTML = html;
-
   }
-
 }
 getAllProducts();
 
@@ -160,7 +159,7 @@ productForm.onsubmit = (e) => {
 
 
   //form validation
-  if (!name.trim() || !imgSrc || !price || !quantity) {
+  if (!name.trim() || !imgTag.files[0] || !price || !quantity) {
 
     //set alert massage
     msg.innerHTML = setAlert('All fields are required');
@@ -353,6 +352,9 @@ const editProduct = (index) => {
   let u_imgBox = productUpdateForm.querySelector('.edit-img');
 
 
+   // console.log(u_imgTag);
+  
+
 
   u_imgTag.onchange = function() {
 
@@ -362,7 +364,7 @@ const editProduct = (index) => {
 
       //set img src to imgSrc variable 
       u_imgSrc = r.result;
-      u_imgTag.setAttribute('img_src', u_imgSrc);
+       u_imgTag.setAttribute('img_src', u_imgSrc);
       u_imgBox.setAttribute('src', u_imgSrc);
 
     }
@@ -371,14 +373,14 @@ const editProduct = (index) => {
 
 
 
-    /* set alert if img size is over
-      if (imgTag.files[0].size > 1000000) {
+    // set alert if img size is over
+      // if (u_imgTag.files[0].size > 1000000) {
           
-        msg.innerHTML = setAlert('Image size should be within 1 mb', 'warning');
-      } else {
-        msg.innerHTML = '';
-      }
-      */
+      //   msg.innerHTML = setAlert('Image size should be within 1 mb', 'warning');
+      // } else {
+      //   msg.innerHTML = '';
+      // }
+      
 
   }
 
@@ -403,10 +405,10 @@ productUpdateForm.onsubmit = (e) => {
   e.preventDefault();
 
 
+
   //get img input file and updated img src from update form
-  /*let u_imgTag = e.target.querySelector('#photo');
+  let u_imgTag = e.target.querySelector('#photo');
   let u_imgSrc = e.target.querySelector('#photo').getAttribute('img_src');
-*/
 
 
 
@@ -416,8 +418,7 @@ productUpdateForm.onsubmit = (e) => {
 
   let { name, price, quantity, index } = Object.fromEntries(formData.entries());
 
-
-
+  
 
   //form validation
 
@@ -433,11 +434,11 @@ productUpdateForm.onsubmit = (e) => {
 
   }
   //check img size (1mb max)
- /* else if (u_imgTag.files[0].size > 1000000) {
+  // else if (u_imgTag.files[0].size > 1000000) {
 
-    editMsg.innerHTML = setAlert('Image should be within 1mb', 'warning');
+  //   editMsg.innerHTML = setAlert('Image should be within 1mb', 'warning');
 
-  }*/
+  // } 
   else {
 
     //get ls data
