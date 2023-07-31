@@ -1,5 +1,7 @@
 # Live link: 
 https://shafikul-islam-ashik.github.io/shopapp_raw_js/
+
+# first practice // everything is not okey
 ___________
 
 ## code over mobile
